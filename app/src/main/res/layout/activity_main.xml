@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:onClick="send"
+        android:text=" Send another text to server"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_last_location" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginStart="65dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/btn_start_location_updates"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/start_updates"
+        app:layout_constraintBottom_toTopOf="@+id/Start_auto"
+        app:layout_constraintEnd_toStartOf="@+id/btn_stop_location_updates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_stop_location_updates"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:text="@string/stop_updates"
+        app:layout_constraintBottom_toTopOf="@+id/Stop_auto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_start_location_updates"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_get_last_location"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="44dp"
+        android:text="send to server"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_result" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:text="Location updates will be received only when app is foreground"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_get_last_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_get_last_location"
+        app:layout_constraintTop_toTopOf="@+id/btn_get_last_location" />
+
+    <TextView
+        android:id="@+id/updated_on"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="fdsfsdfsd"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Start_auto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/location_result"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="76dp"
+        android:text="asdasdas"
+        android:textColor="#333"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_get_last_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/updated_on"
+        app:layout_constraintTop_toBottomOf="@+id/Start_auto" />
+
+    <Button
+        android:id="@+id/Start_auto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginStart="28dp"
+        android:text="START AUTO"
+        app:layout_constraintBottom_toTopOf="@+id/location_result"
+        app:layout_constraintEnd_toStartOf="@+id/Stop_auto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_location_updates" />
+
+    <Button
+        android:id="@+id/Stop_auto"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="95dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginTop="96dp"
+        android:text="STOP AUTO"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/location_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Start_auto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>
